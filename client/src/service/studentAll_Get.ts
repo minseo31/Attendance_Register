@@ -1,12 +1,13 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
-export const allGet = async () => {
+export const studdentAll_Get = async () => {
   try {
     const response = await axios
-      .get("http://localhost:5000/attendance")
+      .get("http://localhost:5000/studentAll")
       .then((res) => res.data);
 
-    console.log("GET 요청에 성공하였습니다.", response.data);
+    // console.log("GET 요청에 성공하였습니다.", response.data);
+
     return response;
   } catch (error: any) {
     // console.error("post 요청에 실패하였습니다. : " + error.stack);

@@ -9,6 +9,7 @@ import { studentGet } from "./controller/studentGet"; // 학생 조회 처리 �
 import { studendAdd } from "./controller/studentAdd"; // 학생 추가 처리 함수
 import { allGet } from "./controller/allGet"; // 전체 데이터 조회 함수
 import { update_Status } from "./controller/update_Status"; // 출석상태 변경 처리 함수
+import { studentAll_Get } from "./controller/studentAll_Get"; // 학생 데이터 전체 읽어오기 처리 함수
 
 export const app = express(); // 서버 앱
 const router = express.Router(); // 서버 라우팅
@@ -40,6 +41,9 @@ router.get("/attendance", (req: Request, res: Response) => {
 router.get("/status", (req: Request, res: Response) => {
   res.send("출석 상태를 변경합니다.");
 });
+router.get("/studentAll", (req: Request, res: Response) => {
+  res.send("학생의 모든 데이터를 읽어옵니다.");
+});
 
 app.listen(port, () => {
   console.log(`서버가 실행되었습니다. http://localhost:${port}`); // 서버가 실행될 때 출력
@@ -49,11 +53,13 @@ app.listen(port, () => {
 app.delete("/students", deleteStudent);
 // 학생 데이터 읽기 처리
 app.get("/students", studentGet);
-// POST /api/student 라우트 핸들러
+// 특정 학번의 학생 데이터 읽어오기 처리
 app.post("/students", studendAdd);
-// 출석부 전체 조회 엔드포인트
+// 출석부 전체 조회 처리
 app.get("/attendance", allGet);
 // 출석 상태 변경 처리
 app.post("/status", update_Status);
+// 학생 데이터 전체 읽어오기 처리
+app.get("/studentAll", studentAll_Get);
 
 module.exports = router;

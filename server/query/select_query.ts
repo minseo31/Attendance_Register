@@ -11,3 +11,6 @@ export const allGetQuery = `
 
 // 학생 데이터를 조회하는 쿼리
 export const studentGet_Query = "SELECT * FROM students WHERE student_number = ?";
+
+// 학생 데이터 전체를 조회하는 쿼리
+export const studentAllGet_Query = "SELECT * FROM students";

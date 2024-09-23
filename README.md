@@ -19,9 +19,9 @@ Azure 구독 만료로 인하여 서버가 닫혔습니다 빠른 기간 내에 
 ## 기술 스택 🔧
 | 항목             | 내용                                         |
 |------------------|--------------------------------------------|
-| **개발 환경**    | VSCode                                      |
-| **프로그래밍 언어** | HTML, CSS, Javascript                |
-| **프레임워크/라이브러리** | React, TailwindCSS, Typescript              |
+| **개발 환경**    | VSCode, Dbeaver                                      |
+| **프로그래밍 언어** | Javascript, SQL                |
+| **프레임워크/라이브러리** | Express, Typescript, MySQL               |
 | **버전 관리**    | Git, GitHub                                  |
 | **배포** | Git Page, Azure                           |
 
